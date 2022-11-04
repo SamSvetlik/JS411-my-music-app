@@ -10,6 +10,7 @@ export default function LoginForm(props) {
       sx={{
         display: "grid",
         gridTemplateColumns: "1fr",
+        margin: "0 auto",
         justifyContent: "center",
         gap: "12px",
         width: "400px"
