@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { Button } from '@mui/material'
 
-export default function LoginForm() {
+export default function LoginForm(props) {
   return (
     <Box
       component="form"
@@ -19,7 +19,7 @@ export default function LoginForm() {
     >
       <TextField id="outlined-basic" label="Email" variant="outlined" type="email"/>
       <TextField id="outlined-basic" label="Password" variant="filled" type="password" />
-      <Button>Sign in</Button>
+      <Button onClick={() => props.setIsLogged(true)}>Sign in</Button>
     </Box>
   );
 }

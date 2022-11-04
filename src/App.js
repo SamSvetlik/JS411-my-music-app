@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <LoginForm setIsLogged={setIsLogged}/>
+      {!isLogged 
+      ? <LoginForm setIsLogged={setIsLogged}/> 
+      : <div> Logged in! </div>}
     </div>
   );
 }
