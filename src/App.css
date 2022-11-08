@@ -17,3 +17,19 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.cardContainer {
+  display: flex;
+  gap: 40px;
+  width: fit-content;
+  margin: auto;
+  padding: 20px;
+}
+
+.dashboard {
+  padding: 20px;
+  font-weight: bold;
+  width: fit-content;
+  text-align: left;
+  margin: auto;
+}

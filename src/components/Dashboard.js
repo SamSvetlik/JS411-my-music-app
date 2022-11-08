@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import OnlineMode from './OnlineMode'
 import MasterVolume from './MasterVolume';
 import SoundQuality from './SoundQuality';
-// import each of the 3 cards that I will use
+import SystemNotifications from './SystemNotifications'
 
 function Dashboard() {
 // useState for: 
@@ -14,13 +14,13 @@ function Dashboard() {
     const [soundQuality, setSoundQuality] = useState("Normal")
 
     return (
-        <div>
-            <span>
+        <div className='dashboard'>Welcome User!
+            <span className='cardContainer'>
                 <OnlineMode onlineMode={onlineMode} setOnlineMode={setOnlineMode} />
                 <MasterVolume masterVolume={masterVolume} setMasterVolume={setMasterVolume}/>
                 <SoundQuality soundQuality={soundQuality} setSoundQuality={setSoundQuality}/> 
             </span>
-            {/* <SystemNotifications /> */}
+            <SystemNotifications onlineMode={onlineMode} masterVolume={masterVolume} soundQuality={soundQuality}/>
         </div>
     )
 }
